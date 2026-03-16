@@ -18,6 +18,19 @@ class Graph{
             adjast[u].push_back(v);
         }
     }
+    // if waited to print the graph then we can use the adjast list to print the graph
+    unordered_map<int,vector<pair<int,int>>>adjastwt;
+    void addEdge(int u,int v,int wt,bool directed){
+        if(directed){
+            // directed edge
+            adjastwt[u].push_back(make_pair(v,wt));
+            
+        }else{
+            // undirected edge
+            adjastwt[v].push_back(make_pair(u,wt));
+            adjastwt[u].push_back(make_pair(v,wt));
+        }
+    }
     void Print(int n){
         for(int i=0;i<=n;i++){
             cout<<i<<" :";
