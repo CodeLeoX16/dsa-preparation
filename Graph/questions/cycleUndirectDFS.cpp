@@ -27,7 +27,7 @@ public:
         for (auto neigh : adjlist[src]) {
             if (!vis[neigh]) {
                 if (cycledtection(neigh, adjlist, src, vis))
-                    return true;
+                    return true;     
             }
             else if (neigh != parent) {
                 return true; // cycle found
