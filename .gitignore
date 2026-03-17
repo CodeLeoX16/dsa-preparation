@@ -1,0 +1,11 @@
+# Ignore executable files
+*.exe
+
+# Optional (recommended for C++)
+*.out
+*.o
+*.obj
+
+# Ignore build folders
+build/
+bin/
